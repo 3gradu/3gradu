@@ -119,7 +119,7 @@ const getImages = async () => {
         url = url.replace("ProofWatermark=TRUE", "ProofWatermark=FALSE");
         if (!ids.includes(id)) {
             ids.push(id);
-            url = url.replace("MaxSize=400", "MaxSize=15000");
+            url = url.replace("MaxSize=400", "MaxSize=6000");
             const res = await fetch(url);
             const imageBlob = await res.blob();
             photozip.file(id + '.jfif', imageBlob, {binary: true});
